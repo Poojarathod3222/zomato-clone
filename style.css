@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* 🔽 Hero Section */
+.hero {
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 🔽 Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: rgba(0, 0, 0, 0.6);
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* 🔽 Hero Content */
+.hero-content {
+  text-align: center;
+  padding: 0 20px 80px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content input {
+  width: 90%;
+  max-width: 500px;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* 🔽 Cities Section */
+.cities {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.cities h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.city-card {
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+  position: relative;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.city-card span {
+  z-index: 2;
+}
+
+.city-card:hover {
+  transform: scale(1.03);
+}
+
+/* 🔽 Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+}
+
+/* ✅ Responsive Enhancements */
+  @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 22px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav-links li a {
+    font-size: 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .cities h2 {
+    font-size: 22px;
+  }
+
+  .city-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .city-card {
+    font-size: 15px;
+    height: 140px;
+  }
+}
